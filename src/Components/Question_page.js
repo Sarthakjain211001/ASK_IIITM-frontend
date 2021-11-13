@@ -32,10 +32,10 @@ export default function Question_page(props) {
                 <Link to="/question/postComment"><button onClick="" type="button" class="btn btn-sm btn-primary mx-2" style={{ "border-radius": "20px" }}>Comment</button></Link>
                 <Link to="/question/viewComments"><button type="button" class="btn btn-sm btn-primary mx-2 viewComments" >View Comments</button></Link>
             </div>
-            {/*
+            
             <div>{props.postComment}</div>
-            <div>{props.viewComments}</div>
-            */}
+            {/* <div>{props.viewComments}</div> */}
+            
             <br /> 
             <hr />
             <div>
@@ -49,9 +49,9 @@ export default function Question_page(props) {
 
             </div>
             
-             {/* <div>{props.postComment}</div>
+              <div>{props.postComment}</div>
             
-             <div>{props.viewComments}</div> */}
+             {/* <div>{props.viewComments}</div>  */}
             <br/>
         </div>
     )

@@ -7,6 +7,8 @@ import Profile from './Components/Profile';
 import Qna from './Components/Qna';
 import Question_page from './Components/Question_page';
 import GiveAnswer from './Components/GiveAnswer';
+import Write_a_comment from './Components/Write_a_comment';
+
 function App() {
   return (
     <Router>
@@ -17,7 +19,7 @@ function App() {
         <Route exact path="/opportunities" element={<Opportunities />} />
         <Route exact path="/myprofile" element={<Profile/>}/>
         <Route exact path="/giveanswer" element={ <GiveAnswer/>} />
-        
+        <Route exact path="/question/postComment" element={ <Question_page postComment={<Write_a_comment/>}/>} />
       </Routes>
     </Router>
   );
