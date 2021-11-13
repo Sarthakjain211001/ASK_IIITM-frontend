@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function Opportunities() {
     return (
         <div>
@@ -7,7 +8,7 @@ export default function Opportunities() {
             <div className="container">
             <div className="row">
                 <div className="col-8">
-            <div style={{ "marginTop": "3rem", "marginBottom": "3rem"}}>
+            <div style={{ /*"border": "3px solid black",*/ /*"marginLeft": "4rem",*/ /*"marginRight": "13rem",*/ "marginTop": "3rem", "marginBottom": "3rem"}}>
                 <div className="card OppCard">
                     <div className="card-body">
                         <h4>Opportunity title</h4>
@@ -51,7 +52,6 @@ export default function Opportunities() {
             </div>
             </div>
         </div>
-   
-        )
+    )
 }
 

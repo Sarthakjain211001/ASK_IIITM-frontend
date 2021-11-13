@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Opptextarea{
+  width: 20rem
+  }
+
+  .PostOppHeading{
+    margin-top:40px;
+   margin-left:3rem; 
+   margin-bottom:2rem
+   }
+ @media only screen and (max-width: 620px) {
+   .PostOpportunity, .OppCard {
+      width: 100%;
+    }
+    .Opptextarea{
+      width: 13rem;
+      margin-left: 1rem;
+    }
+    .PostOppHeading{
+     margin-left: 0rem;
+    }
+    .ViewOppBlock{
+      width: -webkit-fill-available;
+    }
+  }
+ 
