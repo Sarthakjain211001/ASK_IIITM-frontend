@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+/*import './OppStyle.css'*/
 
 
 export default function Opportunities() {
     return (
         <div>
-            <h3 className="mx-4 my-3">Opportunities</h3>
+            <h3 className="mx-4 OppPageHeading">Opportunities</h3>
             <div className="container">
             <div className="row">
                 <div className="col-8 ViewOppBlock">
@@ -43,7 +45,7 @@ export default function Opportunities() {
                     <div>
                     <h5 className="PostOppHeading" >Write your Opportunity here:</h5>
                     
-                  <textarea className="form-control mx-5 my-2 Opptextarea" id="postOpp" rows="15"></textarea>
+                  <textarea className="form-control my-2 Opptextarea" id="postOpp" rows="15"></textarea>
                 <button type="button" className="btn btn-primary mx-5 my-2">Post the Opportunity</button>
                 
             

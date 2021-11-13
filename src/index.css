@@ -12,8 +12,14 @@ code {
     monospace;
 }
 
+.OppPageHeading{
+  margin-top: 3rem;
+  margin-bottom: -1rem;
+}
 .Opptextarea{
-width: 20rem
+width: 20rem;
+margin-left: 3rem;
+margin-right: 3rem;
 }
 
 .viewComments{
@@ -44,18 +50,23 @@ width: 20rem
   margin-bottom:2rem
   }
 @media only screen and (max-width: 620px) {
+  .OppPageHeading{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
   .PostOpportunity, .OppCard {
      width: 100%;
    }
    .Opptextarea{
-     width: 13rem;
+     width: 19rem;
      margin-left: 1rem;
    }
    .PostOppHeading{
-    margin-left: 0rem;
+    margin-left: 1rem;
    }
    .ViewOppBlock{
      width: -webkit-fill-available;
+     margin-top: -2rem;
    }
  }
 
