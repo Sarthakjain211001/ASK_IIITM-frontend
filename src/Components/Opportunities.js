@@ -7,7 +7,7 @@ export default function Opportunities() {
             <div className="container">
             <div className="row">
                 <div className="col-8">
-            <div style={{"marginLeft": "4rem", "marginRight": "13rem", "marginTop": "3rem", "marginBottom": "3rem"}}>
+            <div style={{ "marginTop": "3rem", "marginBottom": "3rem"}}>
                 <div className="card OppCard">
                     <div className="card-body">
                         <h4>Opportunity title</h4>
@@ -38,10 +38,20 @@ export default function Opportunities() {
 
                 </div>
                 </div>
+                <div className="col-4 PostOpportunity" >
+                    <div>
+                    <h5 className="PostOppHeading" >Write your Opportunity here:</h5>
+                    
+                  <textarea className="form-control mx-5 my-2 Opptextarea" id="postOpp" rows="15"></textarea>
+                <button type="button" className="btn btn-primary mx-5 my-2">Post the Opportunity</button>
                 
+            
+                    </div>
+                </div>
             </div>
             </div>
         </div>
-    )
+   
+        )
 }
 
