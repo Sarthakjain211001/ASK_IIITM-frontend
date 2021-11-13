@@ -7,7 +7,7 @@ export default function Opportunities() {
             <h3 className="mx-4 my-3">Opportunities</h3>
             <div className="container">
             <div className="row">
-                <div className="col-8">
+                <div className="col-8 ViewOppBlock">
             <div style={{ /*"border": "3px solid black",*/ /*"marginLeft": "4rem",*/ /*"marginRight": "13rem",*/ "marginTop": "3rem", "marginBottom": "3rem"}}>
                 <div className="card OppCard">
                     <div className="card-body">
