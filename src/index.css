@@ -13,27 +13,84 @@ code {
 }
 
 .Opptextarea{
-  width: 20rem
+width: 20rem
+}
+
+.viewComments{
+  float: right;
+}
+
+.accordion{
+  margin-left: 13rem;
+  margin-right: 13rem;
+   margin-top: 3rem;
+   margin-bottom: 3rem 
+  }
+
+  .WritecommentBox{
+  width: 30rem;
+  margin-left:5px;
+  margin-right:5px
+  }
+
+  .postComment{
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 
   .PostOppHeading{
-    margin-top:40px;
-   margin-left:3rem; 
-   margin-bottom:2rem
-   }
- @media only screen and (max-width: 620px) {
-   .PostOpportunity, .OppCard {
-      width: 100%;
-    }
-    .Opptextarea{
-      width: 13rem;
-      margin-left: 1rem;
-    }
-    .PostOppHeading{
-     margin-left: 0rem;
-    }
-    .ViewOppBlock{
-      width: -webkit-fill-available;
-    }
+   margin-top:40px;
+  margin-left:3rem; 
+  margin-bottom:2rem
   }
+@media only screen and (max-width: 620px) {
+  .PostOpportunity, .OppCard {
+     width: 100%;
+   }
+   .Opptextarea{
+     width: 13rem;
+     margin-left: 1rem;
+   }
+   .PostOppHeading{
+    margin-left: 0rem;
+   }
+   .ViewOppBlock{
+     width: -webkit-fill-available;
+   }
+ }
+
  
+ @media only screen and (max-width: 620px) {
+   .accordion{
+     margin: 3rem 1rem;
+   }
+ }
+
+ @media only screen and (max-width: 620px) {
+  .viewComments{
+    float: none;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .WriteComment{
+    margin-left: -5rem;
+    margin-right: -4rem;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .WritecommentBox{
+    width: 20rem;
+    margin-left: -5rem;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .postComment{
+    margin-left: -5rem;
+    margin-right: 0.5rem;
+  }
+}
