@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Question_page(props) {
 
     let btnHandler=()=>{
-/*        window.open("/giveAnswer", '_blank')*/
+      window.open("/giveAnswer", '_blank')
      }
    
     return (
