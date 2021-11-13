@@ -34,7 +34,7 @@ export default function Question_page(props) {
             </div>
             
             <div>{props.postComment}</div>
-            {/* <div>{props.viewComments}</div> */}
+            <div>{props.viewComments}</div>
             
             <br /> 
             <hr />
@@ -51,7 +51,7 @@ export default function Question_page(props) {
             
               <div>{props.postComment}</div>
             
-             {/* <div>{props.viewComments}</div>  */}
+             <div>{props.viewComments}</div> 
             <br/>
         </div>
     )
