@@ -59,3 +59,38 @@ function App() {
 }
 
 export default App;
+
+// <Navbar />
+//       <Routes>
+//         <Route exact path="/" element={<Qna />} />
+//         <Route path="/signup" element={<Signup />} />
+//         <Route path="/login" element={<Login />} />
+//         <Route exact path="/blogs" element={<Blogs />} />
+//         <Route exact path="/viewblog" element={<Viewblog />} />
+//         <Route
+//           exact
+//           path="/viewblog/writeacommentonblog"
+//           element={<Viewblog writeacommentonblog={<WriteACommentOnBlog />} />}
+//         />
+//         <Route
+//           exact
+//           path="/viewblog/blogcomments"
+//           element={<Viewblog blogcomments={<Blogcomments />} />}
+//         />
+//         <Route exact path="/writeanewblog" element={<Newblog />} />
+//         <Route exact path="/question" element={<Question_page />} />
+//         <Route exact path="/opportunities" element={<Opportunities />} />
+//         <Route exact path="/myprofile" element={<Profile />} />
+//         <Route exact path="/giveanswer" element={<GiveAnswer />} />
+//         <Route
+//           exact
+//           path="/question/postComment"
+//           element={<Question_page postComment={<Write_a_comment />} />}
+//         />
+//         <Route
+//           exact
+//           path="/question/viewComments"
+//           element={<Question_page viewComments={<Comments_for_an_answer />} />}
+//         />
+//       </Routes>
+//     </Router>
