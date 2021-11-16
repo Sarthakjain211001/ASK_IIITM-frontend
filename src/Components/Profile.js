@@ -4,7 +4,7 @@ export default function Profile() {
     return (
         <div>
         <div className="container rounded bg-white mt-5 ">
-<div className="row">
+<div className="row bg-light p-2 mb-5">
     <div className="col-md-5 border-right" style={{"marginRight":"10rem"}}>
         
             <div className="d-flex justify-content-between align-items-center mb-3">
@@ -46,9 +46,10 @@ export default function Profile() {
             <br/>
             
         </div>
-    </div>
-    <br/>
+        <br/>
     <div className="text-center mb-2"><button className="btn btn-primary profile-button" type="button">Save Profile</button></div>
+    </div>
+    
     
 </div>
 
