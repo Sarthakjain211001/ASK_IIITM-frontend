@@ -12,6 +12,18 @@ code {
     monospace;
 }
 
+.form-full{
+  position: relative;
+  width: 33%;
+  height: auto;
+  margin: 5%;
+  padding: 2%;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  left: 25%;
+}
+
 .OppPageHeading{
   margin-top: 3rem;
   margin-bottom: -1rem;
