@@ -17,6 +17,7 @@ import Viewblog from "./Components/viewblog";
 import WriteACommentOnBlog from "./Components/writeacommentonblog";
 import Blogcomments from "./Components/blogcomments";
 import Newblog from "./Components/writeanewblog";
+import Logout from "./Components/Logout";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route exact path="/blogs" element={<Blogs />} />
         <Route exact path="/viewblog" element={<Viewblog />} />
+        <Route exact path="/logout" element={<Logout />}/>
         <Route
           exact
           path="/viewblog/writeacommentonblog"
