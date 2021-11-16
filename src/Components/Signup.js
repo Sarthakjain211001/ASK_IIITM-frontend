@@ -29,11 +29,11 @@ const Signup = () => {
      .then(function(response) {
          console.log(response);
          if (response.status === 422) {
-           window.alert("Invalid Credentials");
+           window.alert("Registration Not Successfull");
          }
          else{
            window.alert("Registered Successfully");
-           navigate('/')
+           navigate('/login')
          }
      })
         
