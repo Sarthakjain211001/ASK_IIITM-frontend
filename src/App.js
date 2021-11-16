@@ -10,6 +10,7 @@ import GiveAnswer from './Components/GiveAnswer';
 import Write_a_comment from './Components/Write_a_comment';
 import Comments_for_an_answer from './Components/Comments_for_an_answer';
 import Signup from './Components/Signup';
+import Login from './Components/Login';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Routes>
       <Route exact path="/" element={<Qna/>}/>
       <Route path="/signup" element={<Signup/>}/>
+      <Route path="/login" element={<Login/>}/>
       <Route exact path="/question" element={ <Question_page/>} />
         <Route exact path="/opportunities" element={<Opportunities />} />
         <Route exact path="/myprofile" element={<Profile/>}/>
