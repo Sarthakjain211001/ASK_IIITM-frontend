@@ -1,11 +1,9 @@
 import React,{useState,useEffect} from 'react'
-import {useNavigate} from 'react-router-dom';
 import { Link } from 'react-router-dom'
 /*import './OppStyle.css'*/
 
 
 export default function Opportunities() {
-    const navigate = useNavigate();
     const [opp,setOpp] = useState()
     const [data,setData] = useState({
         title:"",desc:"",location:"",experience:"",ld:""
