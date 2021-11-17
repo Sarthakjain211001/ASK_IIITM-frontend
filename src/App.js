@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import Aboutus from "./Components/Aboutus";
 import Opportunities from "./Components/Opportunities";
 import Profile from "./Components/Profile";
 import Qna from "./Components/Qna";
@@ -24,6 +25,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Qna />} />
+        <Route exact path="/about" element={<Aboutus />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route exact path="/blogs" element={<Blogs />} />
