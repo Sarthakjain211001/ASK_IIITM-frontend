@@ -18,6 +18,7 @@ import WriteACommentOnBlog from "./Components/writeacommentonblog";
 import Blogcomments from "./Components/blogcomments";
 import Newblog from "./Components/writeanewblog";
 import Logout from "./Components/Logout";
+import Error_page from "./Components/Error_page";
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           path="/question/viewComments"
           element={<Question_page viewComments={<Comments_for_an_answer />} />}
         />
+        <Route path="*" element={<Error_page/>}/>
       </Routes>
     </Router>
   );

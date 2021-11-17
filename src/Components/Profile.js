@@ -4,7 +4,7 @@ export default function Profile() {
     return (
         <div>
         <div className="container rounded bg-white mt-5 ">
-<div className="row bg-light p-2 mb-5">
+<div className="row bg-light p-5 mb-5">
     <div className="col-md-5 border-right" style={{"marginRight":"10rem"}}>
         
             <div className="d-flex justify-content-between align-items-center mb-3">
