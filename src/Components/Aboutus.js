@@ -12,12 +12,13 @@ export default function AboutUs() {
         <main role="main" className="inner cover" style={{ color: "white" }}>
           <h1 className="cover-heading">About Us</h1>
           <p className="lead p-4">
-            about us is a one-page template for building simple and beautiful
-            home pages. Download, edit the text, and add your own fullscreen
-            background photo to make it your own.about us is a one-page template
-            for building simple and beautiful home pages. Download, edit the
-            text, and add your own fullscreen background photo to make it your
-            own.
+            As they say life will always come circles, but what we can do is
+            draw it better than the last time. With this belief we present you
+            the Ask_IIITM, your one stop solution to every college and life
+            related problems. Write, Read, Help, Grow. and find the light that
+            takes you and your peers far somewhere close to your world of
+            dreams. So, come and join us at your very own especially designed
+            college social media.
           </p>
           <p className="lead">
             <a href="#" className="btn btn-lg btn-secondary mb-5 ">
