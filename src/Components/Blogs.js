@@ -2,28 +2,21 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
-  const handleWriteblog = () => {
-    window.open("./writeanewblog", "_blank");
-  };
   return (
     <div>
       <section className="jumbotron text-center mt-4">
         <div className="container">
           <h1 className="jumbotron-heading">Read and write blogs</h1>
           <p className="lead text-muted">
-            read and write about life,coding or experience. be the light you
-            needed when you were the new bird out at campus
+            Read and Write about life,coding or experience. Be the light you
+            needed when you were the new bird out at campus.
           </p>
           <p>
-            <button
-              onClick={() => {
-                handleWriteblog();
-              }}
-              className="btn btn-primary my-2"
-              type="button"
-            >
+          <Link to={'/writeanewblog'}style={{ textDecoration: 'none', color:'teal'}}>
+            <button  className="btn btn-primary my-2" type="button">
               CLICK HERE TO WRITE A BLOG
             </button>
+            </Link>
           </p>
         </div>
       </section>
