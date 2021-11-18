@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logout from './Logout';
 
-export default function Navbar() {
+
+export default function Navbar(props) {
  return(
      <div>
 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -33,7 +35,25 @@ export default function Navbar() {
           <Link className="nav-link" to="myprofile">My Profile</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="#">LogOut</Link>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">LogOut</button>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">LogOut Alert</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to LogOut ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary">Yes, LogOut</button>
+      </div>
+    </div>
+  </div>
+</div>
         </li>
       </ul>  
     

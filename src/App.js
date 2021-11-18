@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
+import Aboutus from "./Components/Aboutus";
 import Opportunities from "./Components/Opportunities";
 import Profile from "./Components/Profile";
 import Qna from "./Components/Qna";
@@ -17,6 +18,8 @@ import Viewblog from "./Components/viewblog";
 import WriteACommentOnBlog from "./Components/writeacommentonblog";
 import Blogcomments from "./Components/blogcomments";
 import Newblog from "./Components/writeanewblog";
+import Logout from "./Components/Logout";
+import Error_page from "./Components/Error_page";
 
 function App() {
   return (
@@ -24,10 +27,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Qna />} />
+        <Route exact path="/about" element={<Aboutus />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route exact path="/blogs" element={<Blogs />} />
         <Route path="/viewblog/:blogid" element={<Viewblog />} />
+        <Route exact path="/logout" element={<Logout />}/>
         <Route
           exact
           path="/viewblog/writeacommentonblog"
@@ -53,6 +58,7 @@ function App() {
           path="/question/viewComments"
           element={<Question_page viewComments={<Comments_for_an_answer />} />}
         />
+        <Route path="*" element={<Error_page/>}/>
       </Routes>
     </Router>
   );
