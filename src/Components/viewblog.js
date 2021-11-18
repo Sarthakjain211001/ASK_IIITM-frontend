@@ -1,79 +1,49 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+import { useParams } from 'react-router-dom';
 // import "./index.css";
 import WriteACommentOnBlog from "./writeacommentonblog";
 import Blogcomments from "./blogcomments";
 import { Link } from "react-router-dom";
 
 const Viewblog = (props) => {
+  const [blog,setBlog] = useState()
+  const {blogid} = useParams();
+  const call = async () =>{
+    try{
+        const res = await fetch(`/post/${blogid}`,{
+            method:"GET",
+            headers:{
+                Accept:"application/json",
+                "Content-Type":"application/json",
+            },
+            credentials:"include"
+        });
+        const data = await res.json();
+        console.log(data.postedBy)
+        setBlog(data);
+        
+        if(! res.status === 200){ 
+            const error = new Error(res.error);
+            throw error;
+        }
+     }catch(err){
+      console.log(err);
+     }
+}
+
+ useEffect(()=>{
+     call();
+    },[])
   return (
     <div>
       <div className="container">
         <div className="blog-post mb-4">
           <h2 className="blog-post-title">Sample blog post Title </h2>
           <p className="blog-post-meta">
-            January 1, 2014 by <a href="#">author username</a>
+            January 1, 2014 by <a href="#">{blog&&blog.postedBy&&blog.postedBy.name}</a>
           </p>
-
-          <p>
-            This blog post shows a few different types of content that's
-            supported and styled with Bootstrap. Basic typography, images, and
-            code are all supported.
-          </p>
-
-          <p>
-            Cum sociis natoque penatibus et magnis nascetur ridiculus mus.
-            Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
-            vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
-            consectetur purus sit amet fermentum.
-          </p>
-          <blockquote>
-            <p>
-              Curabitur blandit tempus porttitor.{" "}
-              <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu
-              leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
-            </p>
-          </blockquote>
-          <p>
-            Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis
-            consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla
-            sed consectetur.
-          </p>
-
-          <p>
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor. Duis mollis, est non commodo luctus, nisi erat porttitor
-            ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-          </p>
-
-          <p>
-            Cum sociis natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus.
-          </p>
-
-          <p>
-            Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem
-            malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus
-            commodo, tortor mauris condimentum nibh, ut fermentum massa.
-          </p>
-
-          <p>
-            Cum sociis natoque penatibus et magnis dis parturient montes,
-            nascetur ridiculus mus. Aenean lacinia bibendum nulla sed
-            consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
-            dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-            ut fermentum massa justo sit amet risus.
-          </p>
-
-          <p>
-            Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit
-            libero, a pharetra augue.
-          </p>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Sed posuere
-            consectetur est at lobortis.
-          </p>
-
+          {blog&&blog.body}
+          <br/>
           <button type="button" className="btn btn-primary m-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
