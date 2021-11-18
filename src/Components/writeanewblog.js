@@ -1,6 +1,8 @@
 import React,{useState} from "react";
+import {useNavigate} from 'react-router-dom';
 
 const Newblog = () => {
+  const navigate = useNavigate();
   const [blog,setBlog] = useState({
     title:"",body:""
   })
@@ -30,6 +32,7 @@ const Newblog = () => {
       }
       else{
         window.alert("Successful");
+        navigate('/blogs')
       }
   })
   }
