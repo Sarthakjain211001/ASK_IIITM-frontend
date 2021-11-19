@@ -56,7 +56,7 @@ export default function Navbar(props) {
               <li className="nav-item">
                 <button
                   type="button"
-                  className="btn btn-primary"
+                  className="btn btn-danger LogOutBtn"
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
                 >

@@ -4,14 +4,37 @@ import Comments_for_an_answer from './Comments_for_an_answer'
 import { Link } from 'react-router-dom'
 
 export default function Question_page(props) {
-
+     
+    let LikeToggle = true;
+    let LiketoggleFun=()=>{
+       LikeToggle ? LikeHandler() : ClearLikeHandler()
+       LikeToggle = !LikeToggle;
+    }
+    let DislikeToggle = true;
+    let DisliketoggleFun=()=>{
+       DislikeToggle ? DislikeHandler() : ClearDislikeHandler()
+       DislikeToggle = !DislikeToggle;
+    }
     let btnHandler=()=>{
         window.open("/giveAnswer", '_blank')
        }
-    // letCommentbtnHandler=()=>{
-    //     Link to="/question/postComment"
-    // }
-   
+       let LikeHandler=()=>{
+        document.getElementById("LikeID").className="bi bi-hand-thumbs-up-fill";
+        document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
+        document.getElementById("LikeID").style="focus: none";
+       }
+       let ClearLikeHandler=()=>{
+        document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
+        document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
+       }
+       let DislikeHandler=()=>{
+        document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
+        document.getElementById("DislikeID").className="bi bi-hand-thumbs-down-fill";
+       }
+       let ClearDislikeHandler=()=>{
+        document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
+        document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
+       }
     return (
         <div className="container mx-8 my-3">
             <div>
@@ -23,7 +46,7 @@ export default function Question_page(props) {
                 <br />
                 <h5><b>Author : UserName</b></h5>
                 <p>Question description lorem ipsum fgrdb zgnftrgfndrg nddrs bdzrsbgdzr bdzrsbgdzrs grbzgb ggbgzbg</p>
-                <button onClick={btnHandler} type="button" class="btn btn-primary mx-2">Give your answer</button>
+                <button onClick={btnHandler} type="button" className="btn btn-primary mx-2">Give your answer</button>
             </div>
 
             <hr style={{ "border": "2px solid blue" }} />
@@ -32,10 +55,10 @@ export default function Question_page(props) {
                 <p><b>Author: Username</b></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-                <button type="button" class="btn btn-sm btn-primary mx-2"><i class="bi bi-hand-thumbs-up"></i>Like</button>
-                <button type="button" class="btn btn-sm btn-danger mx-2"><i class="bi bi-hand-thumbs-down"></i>Dislike</button>
-                <Link to="/question/postComment"><button onClick="" type="button" class="btn btn-sm btn-primary mx-2" style={{ "border-radius": "20px" }}><i class="bi bi-chat-left"></i> Write Comment</button></Link>
-                <Link to="/question/viewComments"><button type="button" class="btn btn-sm btn-primary mx-2 viewComments" >View Comments</button></Link>
+                <button type="button" onClick={LiketoggleFun} className="btn btn-sm mx-2 Like"><i id="LikeID" className="bi bi-hand-thumbs-up"></i>Like</button>
+                <button type="button" onClick={DisliketoggleFun} className="btn btn-sm  mx-2 Dislike"><i id="DislikeID" className="bi bi-hand-thumbs-down"></i>Dislike</button>
+                <Link to="/question/postComment"><button type="button" className="btn btn-sm btn-primary mx-2 Comment" style={{ "border-radius": "20px",}}><i className="bi bi-chat-left"></i> Write Comment</button></Link>
+                <Link to="/question/viewComments"><button type="button" className="btn btn-sm btn-primary mx-2 viewComments" >View Comments</button></Link>
             </div>
             {/*<Write_a_comment/>*/}
             <div>{props.postComment}</div>
@@ -47,10 +70,10 @@ export default function Question_page(props) {
                 <h5>Answer 2</h5>
                 <p><b>Author: Username</b></p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button type="button" class="btn btn-sm btn-primary mx-2"><i class="bi bi-hand-thumbs-up"></i>Like</button>
-                <button type="button" class="btn btn-sm btn-danger mx-2"><i class="bi bi-hand-thumbs-down"></i>Dislike</button>
-                <Link to="/question/postComment"><button type="button" class="btn btn-sm btn-primary mx-2" style={{ "border-radius": "20px" }}><i class="bi bi-chat-left"></i> Write Comment</button></Link>
-                <Link to="/question/viewComments"><button type="button" class="btn btn-sm btn-primary mx-2 viewComments" >View Comments</button></Link>
+                <button type="button" onClick={LiketoggleFun}  className="btn btn-sm  mx-2 Like"><span className="LikeIcon"><i className="bi bi-hand-thumbs-up"></i></span>Like</button>
+                <button type="button" onClick={DisliketoggleFun}  className="btn btn-sm  mx-2 Dislike"><i className="bi bi-hand-thumbs-down"></i>Dislike</button>
+                <Link to="/question/postComment"><button type="button" className="btn btn-sm btn-primary mx-2 Comment" style={{ "border-radius": "20px" }}><i className="bi bi-chat-left"></i> Write Comment</button></Link>
+                <Link to="/question/viewComments"><button type="button" className="btn btn-sm btn-primary mx-2 viewComments" >View Comments</button></Link>
 
             </div>
              {/* <Write_a_comment/> */}

@@ -82,6 +82,40 @@ code {
   margin-left: 3rem;
   margin-bottom: 2rem;
 }
+
+.Like:hover{
+  color:white;
+  background-color: blue;
+}
+.LikeIcon{
+  color: green;
+}
+.Like{
+  color:blue;
+  background-color: white;
+  border: 1px solid blue;
+}
+.Dislike{
+  color: red;
+  background-color: white;
+  border: 1px solid red;
+}
+.Dislike:hover{
+  background-color: red;
+  color: white;
+}
+.Comment{
+  color: blue;
+  background-color: white;
+}
+.Comment:hover{
+  color:white;
+  background-color:blue;
+}
+.LogOutBtn:hover{
+  background-color: white;
+  color: red;
+}
 @media only screen and (max-width: 620px) {
   .OppPageHeading {
     margin-top: 2rem;
