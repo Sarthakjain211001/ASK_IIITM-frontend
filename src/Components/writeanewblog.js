@@ -1,44 +1,44 @@
-import React,{useState} from "react";
-import {useNavigate} from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Newblog = () => {
   const navigate = useNavigate();
-  const [blog,setBlog] = useState({
-    title:"",body:""
-  })
-  let name,value;
-  const handleInputs = (e) =>{
-    console.log(e); 
+  const [blog, setBlog] = useState({
+    title: "",
+    body: "",
+  });
+  let name, value;
+  const handleInputs = (e) => {
+    console.log(e);
     name = e.target.name;
     value = e.target.value;
-    setBlog({...blog,[name]:value});
-  }
-  const PostData = async(e)=>{
+    setBlog({ ...blog, [name]: value });
+  };
+  const PostData = async (e) => {
     e.preventDefault();
-    const{title,body}=blog;
-    fetch('/write',{
-      method:"POST",
+    const { title, body } = blog;
+    fetch("/write", {
+      method: "POST",
       headers: {
-        "Content-Type":"application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        title, body
-      })
-    })
-    .then(function(response) {
+        title,
+        body,
+      }),
+    }).then(function (response) {
       console.log(response);
       if (response.status === 422) {
-        console.log("error")
-      }
-      else{
+        console.log("error");
+      } else {
         window.alert("Successful");
-        navigate('/blogs')
+        navigate("/blogs");
       }
-  })
-  }
+    });
+  };
   return (
     <div>
-      <form className="mx-auto">
+      <form className="mx-auto fontlink">
         <div className="container shadow p-3 mb-5 bg-white rounded mt-4 pt-4">
           <div class="form-group mt-2 pr-4">
             <label for="exampleFormControlInput1">Blog Title</label>
@@ -74,7 +74,11 @@ const Newblog = () => {
               onChange={handleInputs}
             ></textarea>
           </div>
-          <button type="submit" class="btn btn-outline-secondary "onClick={PostData}>
+          <button
+            type="submit"
+            class="btn btn-outline-secondary "
+            onClick={PostData}
+          >
             Submit Blog
           </button>
         </div>
@@ -84,15 +88,6 @@ const Newblog = () => {
 };
 
 export default Newblog;
-
-
-
-
-
-
-
-
-
 
 //  <div>
 //       <form className="mx-auto">

@@ -36,7 +36,7 @@ const Viewblog = (props) => {
   }, []);
   return (
     <div>
-      <div className="container">
+      <div className="container fontlink2">
         <div className="blog-post mb-4">
           <h2 className="blog-post-title">Sample blog post Title </h2>
           <p className="blog-post-meta">

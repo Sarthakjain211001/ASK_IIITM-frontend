@@ -1,4 +1,5 @@
 import logo from "./logo.svg";
+import "./index.css";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
@@ -32,7 +33,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route exact path="/blogs" element={<Blogs />} />
         <Route path="/viewblog/:blogid" element={<Viewblog />} />
-        <Route exact path="/logout" element={<Logout />}/>
+        <Route exact path="/logout" element={<Logout />} />
         <Route
           exact
           path="/viewblog/writeacommentonblog"
@@ -58,7 +59,7 @@ function App() {
           path="/question/viewComments"
           element={<Question_page viewComments={<Comments_for_an_answer />} />}
         />
-        <Route path="*" element={<Error_page/>}/>
+        <Route path="*" element={<Error_page />} />
       </Routes>
     </Router>
   );

@@ -1,26 +1,39 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #ededed;
+  /* background-image: url("https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg"); */
+}
+
+.fontlink {
+  font-family: "Montagu Slab", serif;
+}
+.fontlinksoft {
+  font-family: "Mukta", sans-serif;
+}
+.fontlink2 {
+  font-family: "Outfit", sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.blog_lines{
+.blog_lines {
   overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
-.form-full{
+.form-full {
   position: relative;
   width: 33%;
   height: auto;
@@ -32,80 +45,80 @@ code {
   left: 25%;
 }
 
-.OppPageHeading{
+.OppPageHeading {
   margin-top: 3rem;
   margin-bottom: -1rem;
 }
-.Opptextarea{
-width: 20rem;
-margin-left: 3rem;
-margin-right: 3rem;
+.Opptextarea {
+  width: 20rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
-.viewComments{
+.viewComments {
   float: right;
 }
 
-.accordion{
+.accordion {
   margin-left: 13rem;
   margin-right: 13rem;
-   margin-top: 3rem;
-   margin-bottom: 3rem 
-  }
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
 
-  .WritecommentBox{
+.WritecommentBox {
   width: 30rem;
-  margin-left:5px;
-  margin-right:5px
-  }
+  margin-left: 5px;
+  margin-right: 5px;
+}
 
-  .postComment{
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
+.postComment {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
 
-  .PostOppHeading{
-   margin-top:40px;
-  margin-left:3rem; 
-  margin-bottom:2rem
-  }
+.PostOppHeading {
+  margin-top: 40px;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
 @media only screen and (max-width: 620px) {
-  .OppPageHeading{
+  .OppPageHeading {
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
-  .PostOpportunity, .OppCard {
-     width: 100%;
-   }
-   .Opptextarea{
-     width: 19rem;
-     margin-left: 1rem;
-   }
-   .PostOppHeading{
+  .PostOpportunity,
+  .OppCard {
+    width: 100%;
+  }
+  .Opptextarea {
+    width: 19rem;
     margin-left: 1rem;
-   }
-   .ViewOppBlock{
-     width: -webkit-fill-available;
-     margin-top: -2rem;
-   }
- }
+  }
+  .PostOppHeading {
+    margin-left: 1rem;
+  }
+  .ViewOppBlock {
+    width: -webkit-fill-available;
+    margin-top: -2rem;
+  }
+}
 
- 
- @media only screen and (max-width: 620px) {
-   .accordion{
-     margin: 3rem 1rem;
-   }
- }
+@media only screen and (max-width: 620px) {
+  .accordion {
+    margin: 3rem 1rem;
+  }
+}
 
- @media only screen and (max-width: 620px) {
-  .viewComments{
+@media only screen and (max-width: 620px) {
+  .viewComments {
     float: none;
     margin-top: 1rem;
   }
 }
 
 @media only screen and (max-width: 620px) {
-  .WriteComment{
+  .WriteComment {
     margin-left: -5rem;
     margin-right: -4rem;
     margin-top: 1rem;
@@ -113,14 +126,14 @@ margin-right: 3rem;
 }
 
 @media only screen and (max-width: 620px) {
-  .WritecommentBox{
+  .WritecommentBox {
     width: 20rem;
     margin-left: -5rem;
   }
 }
 
 @media only screen and (max-width: 620px) {
-  .postComment{
+  .postComment {
     margin-left: -5rem;
     margin-right: 0.5rem;
   }
