@@ -10,8 +10,8 @@ export default function AboutUs() {
     >
       <div className="cover-container d-flex h-100 p-3 mx-auto flex-column">
         <main role="main" className="inner cover" style={{ color: "white" }}>
-          <h1 className="cover-heading">About Us</h1>
-          <p className="lead p-4">
+          <h1 className="cover-heading fontlink">About Us</h1>
+          <p className="lead p-4 fontlink2">
             As they say life will always come circles, but what we can do is
             draw it better than the last time. With this belief we present you
             the Ask_IIITM, your one stop solution to every college and life

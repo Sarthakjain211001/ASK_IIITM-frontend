@@ -31,7 +31,7 @@ const Blogs = () => {
   }, []);
   return (
     <div>
-      <section className="jumbotron text-center mt-4">
+      <section className="jumbotron text-center mt-4 fontlink">
         <div className="container">
           <h1 className="jumbotron-heading">Read and write blogs</h1>
           <p className="lead text-muted">
