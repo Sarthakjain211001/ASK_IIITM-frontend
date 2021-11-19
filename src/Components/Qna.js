@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Qna() {
+
+  let btnHandler1=()=>{
+    window.open("/askQuestion", '_blank');
+    console.log("HeeeeeeeeeeeeeeeeeeeeeeeellllllllllllllllOoooooooooooooooooo");
+   }
+
   return (
     <>
       <div>
@@ -11,6 +17,7 @@ export default function Qna() {
         >
           Q&A Section
         </h3>
+        <button onClick={btnHandler1} className="btn btn-primary" style={{"float":"right", "marginRight":"2rem", "marginTop":"-1.2rem", "borderRadius":"2rem"}}>Ask a Question</button>
       </div>
 
       <div className="accordion fontlink2" id="accordionExample">

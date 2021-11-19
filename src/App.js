@@ -21,6 +21,7 @@ import Blogcomments from "./Components/blogcomments";
 import Newblog from "./Components/writeanewblog";
 import Logout from "./Components/Logout";
 import Error_page from "./Components/Error_page";
+import AskAQues from "./Components/AskAQues";
 
 function App() {
   return (
@@ -29,11 +30,18 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Qna />} />
         <Route exact path="/about" element={<Aboutus />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
+        <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/login" element={<Login />} />
         <Route exact path="/blogs" element={<Blogs />} />
-        <Route path="/viewblog/:blogid" element={<Viewblog />} />
+        <Route exact path="/viewblog/:blogid" element={<Viewblog />} />
         <Route exact path="/logout" element={<Logout />} />
+        <Route exact path="/writeanewblog" element={<Newblog />} />
+        <Route exact path="/question" element={<Question_page />} />
+        <Route exact path="/opportunities" element={<Opportunities />} />
+        <Route exact path="/myprofile" element={<Profile />} />
+        <Route exact path="/giveanswer" element={<GiveAnswer />} />
+        <Route exact path="/askQuestion" element={ <AskAQues />}/>
+        
         <Route
           exact
           path="/viewblog/writeacommentonblog"
@@ -44,11 +52,6 @@ function App() {
           path="/viewblog/blogcomments"
           element={<Viewblog blogcomments={<Blogcomments />} />}
         />
-        <Route exact path="/writeanewblog" element={<Newblog />} />
-        <Route exact path="/question" element={<Question_page />} />
-        <Route exact path="/opportunities" element={<Opportunities />} />
-        <Route exact path="/myprofile" element={<Profile />} />
-        <Route exact path="/giveanswer" element={<GiveAnswer />} />
         <Route
           exact
           path="/question/postComment"
@@ -60,7 +63,9 @@ function App() {
           element={<Question_page viewComments={<Comments_for_an_answer />} />}
         />
         <Route path="*" element={<Error_page />} />
+        
       </Routes>
+     
     </Router>
   );
 }
