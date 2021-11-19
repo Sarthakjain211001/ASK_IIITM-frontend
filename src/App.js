@@ -31,7 +31,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route exact path="/blogs" element={<Blogs />} />
-        <Route exact path="/viewblog" element={<Viewblog />} />
+        <Route path="/viewblog/:blogid" element={<Viewblog />} />
         <Route exact path="/logout" element={<Logout />}/>
         <Route
           exact

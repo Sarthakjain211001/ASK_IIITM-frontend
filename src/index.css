@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+.blog_lines{
+  overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
 .form-full{
   position: relative;
   width: 33%;
