@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import Logout from "./Logout";
 
 export default function Navbar(props) {
+
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fontlink">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             ASK_IIITM
@@ -44,6 +45,7 @@ export default function Navbar(props) {
                 </Link>
               </li>
             </ul>
+
 
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">

@@ -128,6 +128,7 @@ export default function Opportunities() {
                                     onChange={handleInputs}
                                     />
                                 </div>
+                                <br/>
                                 <div class="form-group">
                                     <label for="exp">Last Date to Apply</label>
                                     <input type="text" name="ld" class="form-control" id="ld" aria-describedby="exp" placeholder="Enter date in dd/mm/yy Format" 
