@@ -5,7 +5,7 @@ import Logout from "./Logout";
 export default function Navbar(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fontlink">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             ASK_IIITM
