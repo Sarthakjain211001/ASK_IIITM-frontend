@@ -13,6 +13,7 @@ import Write_a_comment from "./Components/Write_a_comment";
 import Comments_for_an_answer from "./Components/Comments_for_an_answer";
 import Signup from "./Components/Signup";
 import Login from "./Components/Login";
+import Footer from "./Components/footer";
 
 import Blogs from "./Components/Blogs";
 import Viewblog from "./Components/viewblog";
@@ -40,8 +41,8 @@ function App() {
         <Route exact path="/opportunities" element={<Opportunities />} />
         <Route exact path="/myprofile" element={<Profile />} />
         <Route exact path="/giveanswer" element={<GiveAnswer />} />
-        <Route exact path="/askQuestion" element={ <AskAQues />}/>
-        
+        <Route exact path="/askQuestion" element={<AskAQues />} />
+
         <Route
           exact
           path="/viewblog/writeacommentonblog"
@@ -63,9 +64,9 @@ function App() {
           element={<Question_page viewComments={<Comments_for_an_answer />} />}
         />
         <Route path="*" element={<Error_page />} />
-        
       </Routes>
-     
+
+      <Footer />
     </Router>
   );
 }
