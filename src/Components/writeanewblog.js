@@ -38,13 +38,15 @@ const Newblog = () => {
   };
   return (
     <div>
-      <form className="mx-auto fontlink">
-        <div className="container shadow p-3 mb-5 bg-white rounded mt-4 pt-4">
-          <div class="form-group mt-2 pr-4">
-            <label for="exampleFormControlInput1">Blog Title</label>
+      <form className="mx-auto border border-dark fontlink ">
+        <div className="container border shadow p-3 mb-5 bg-white rounded mt-4 pt-4 pb-2">
+          <div className="form-group mt-2 pr-4 pb-1">
+            <label for="exampleFormControlInput1" className="pb-2 ">
+              Blog Title
+            </label>
             <input
               type="text"
-              class="form-control"
+              class="form-control pb-1"
               id="exampleFormControlInput1"
               placeholder="Blog Title"
               name="title"
