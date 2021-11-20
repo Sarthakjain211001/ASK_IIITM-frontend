@@ -1,7 +1,9 @@
 import logo from "./logo.svg";
 import "./index.css";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React,{createContext,useReducer,useEffect,useContext} from 'react'
+import {reducer,initialState} from './reducers/userReducer'; 
+import { BrowserRouter as Router, Routes, Route,useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Aboutus from "./Components/Aboutus";
 import Opportunities from "./Components/Opportunities";
@@ -24,11 +26,25 @@ import Logout from "./Components/Logout";
 import Error_page from "./Components/Error_page";
 import AskAQues from "./Components/AskAQues";
 
-function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
+export const UserContext = createContext()
+
+const Routing = ()=>{
+  const navigate = useNavigate();
+  const {state,dispatch} = useContext(UserContext)
+  
+  const user = state;
+  useEffect(() => {
+    console.log(typeof(user))
+    if(user){
+      
+       dispatch({type:"USER",payload:user})
+       navigate('/')
+    }else{
+       navigate('/login')
+    }
+ },[])
+  return(
+    <Routes>
         <Route exact path="/" element={<Qna />} />
         <Route exact path="/about" element={<Aboutus />} />
         <Route exact path="/signup" element={<Signup />} />
@@ -65,9 +81,19 @@ function App() {
         />
         <Route path="*" element={<Error_page />} />
       </Routes>
+  )
+}
 
+function App() {
+  const [state,dispatch] = useReducer(reducer,initialState)
+  return (
+    <UserContext.Provider value={{state,dispatch}}>
+    <Router>
+      <Navbar />
+      <Routing/>
       <Footer />
     </Router>
+    </UserContext.Provider>
   );
 }
 
