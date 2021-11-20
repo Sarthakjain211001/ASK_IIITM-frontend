@@ -3,14 +3,19 @@ import { Link } from "react-router-dom";
 import Logout from "./Logout";
 
 export default function Navbar(props) {
-
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fontlink">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <img
+            src="https://pbs.twimg.com/media/FEnXnUhUUAMfUOA?format=jpg&name=large"
+            alt="ASK_IIITM"
+            className="mx-2"
+            style={{ width: "5%", height: "3%" }}
+          />
+          {/* <a className="navbar-brand" href="#">
             ASK_IIITM
-          </a>
+          </a> */}
           <button
             className="navbar-toggler"
             type="button"
@@ -45,7 +50,6 @@ export default function Navbar(props) {
                 </Link>
               </li>
             </ul>
-
 
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
