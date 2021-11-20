@@ -6,12 +6,16 @@ export default function AboutUs() {
   return (
     <div
       className="text-center container rounded mt-5 pt-5"
-      style={{ backgroundColor: "#4C4C4C" }}
+      style={{
+        backgroundImage: `url("https://images.unsplash.com/photo-1578659360996-38d62c6bec50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=402&q=80")`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "COVER",
+      }}
     >
       <div className="cover-container d-flex h-100 p-3 mx-auto flex-column">
         <main role="main" className="inner cover" style={{ color: "white" }}>
           <h1 className="cover-heading fontlink">About Us</h1>
-          <p className="lead p-4 fontlink2">
+          <p className="lead p-4 fontlink2 text-left">
             As they say life will always come circles, but what we can do is
             draw it better than the last time. With this belief we present you
             the Ask_IIITM, your one stop solution to every college and life
