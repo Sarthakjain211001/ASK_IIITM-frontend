@@ -5,23 +5,26 @@ import { Link } from 'react-router-dom'
 
 export default function Question_page(props) {
      
+
     let LikeToggle = true;
+    let DislikeToggle = true;
+
     let LiketoggleFun=()=>{
        LikeToggle ? LikeHandler() : ClearLikeHandler()
        LikeToggle = !LikeToggle;
-    }
-    let DislikeToggle = true;
+       DislikeToggle = true;
+    }    
     let DisliketoggleFun=()=>{
        DislikeToggle ? DislikeHandler() : ClearDislikeHandler()
        DislikeToggle = !DislikeToggle;
+       LikeToggle = true;
     }
     let btnHandler=()=>{
         window.open("/giveAnswer", '_blank')
        }
        let LikeHandler=()=>{
-        document.getElementById("LikeID").className="bi bi-hand-thumbs-up-fill";
+        document.getElementById("LikeID") .className="bi bi-hand-thumbs-up-fill";
         document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
-        document.getElementById("LikeID").style="focus: none";
        }
        let ClearLikeHandler=()=>{
         document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
@@ -35,6 +38,7 @@ export default function Question_page(props) {
         document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
         document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
        }
+       
     return (
         <div className="container mx-8 my-3">
             <div>
