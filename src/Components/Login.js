@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import {UserContext} from '../App'
+import { useCookies } from 'react-cookie';
 
 const Login = () => {
+  const {state,dispatch} = useContext(UserContext)
   const navigate = useNavigate();
+  const [cookies, setCookie] = useCookies(['jwtoken']);
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -17,7 +21,7 @@ const Login = () => {
   const PostData = async (e) => {
     e.preventDefault();
     const { email, password } = user;
-    fetch("/login", {
+    const res = await fetch("/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,15 +30,33 @@ const Login = () => {
         email,
         password,
       }),
-    }).then(function (response) {
-      console.log(response);
-      if (response.status === 422) {
-        window.alert("Invalid Credentials");
-      } else {
-        window.alert("Login Successfully");
-        navigate("/");
-      }
-    });
+    }).then(res=>res.json())
+    .then(data=>{
+        console.log(data)
+       if(data.error){
+        window.alert('UnSuccessful')
+          console.log("error");
+       }
+       else{
+          setCookie('jwtoken', data.token,{ path: '/' });
+          console.log(data.user)
+          dispatch({type:"USER",payload:data.user})
+          console.log(state)
+          //window.alert('Successful')
+          navigate('/');
+       }
+    }).catch(err=>{
+        console.log(err)
+    })
+    // .then(function (response) {
+    //   //console.log(response.cookie);
+    //   if (response.status === 422) {
+    //     window.alert("Invalid Credentials");
+    //   } else {
+    //     window.alert("Login Successfully");
+    //     navigate("/");
+    //   }
+    // });
   };
   return (
     <div pt-5>

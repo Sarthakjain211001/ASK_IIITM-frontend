@@ -14,7 +14,6 @@ const Blogs = () => {
             credentials:"include"
         });
         const data = await res.json();
-        console.log(data.postedBy)
         setBlog(data);
         
         if(! res.status === 200){ 
