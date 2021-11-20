@@ -5,11 +5,10 @@ import { Link } from "react-router-dom";
 export default function AboutUs() {
   return (
     <div
-      className="text-center container rounded mt-5 pt-5"
+      className="text-center container rounded mt-5 pt-5 abt-img"
       style={{
         backgroundImage: `url("https://images.unsplash.com/photo-1578659360996-38d62c6bec50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=402&q=80")`,
         backgroundRepeat: "no-repeat",
-        backgroundSize: "COVER",
       }}
     >
       <div className="cover-container d-flex h-100 p-3 mx-auto flex-column">

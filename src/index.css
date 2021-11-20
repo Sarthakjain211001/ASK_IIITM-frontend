@@ -111,6 +111,9 @@ code {
   background-color: white;
   color: red;
 }
+.abt-img{
+  background-size: 1146px 480px;
+}
 .Logo {
   width: 5%;
   height: 3%;
@@ -176,4 +179,9 @@ code {
       width: 10%;
       height: 3%;
     }
+}
+@media only screen and (max-width: 620px) {
+.abt-img{
+  background-size: 500px 800px;
+}
 }
