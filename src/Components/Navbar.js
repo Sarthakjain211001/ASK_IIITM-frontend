@@ -10,8 +10,8 @@ export default function Navbar(props) {
           <img
             src="https://pbs.twimg.com/media/FEnXnUhUUAMfUOA?format=jpg&name=large"
             alt="ASK_IIITM"
-            className="mx-2"
-            style={{ width: "5%", height: "3%" }}
+            className="mx-2 Logo"
+           
           />
           {/* <a className="navbar-brand" href="#">
             ASK_IIITM
