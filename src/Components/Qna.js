@@ -2,11 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Qna() {
-
-  let btnHandler1=()=>{
-    window.open("/askQuestion", '_blank');
+  let btnHandler1 = () => {
+    window.open("/askQuestion", "_blank");
     console.log("HeeeeeeeeeeeeeeeeeeeeeeeellllllllllllllllOoooooooooooooooooo");
-   }
+  };
 
   return (
     <>
@@ -17,13 +16,24 @@ export default function Qna() {
         >
           Q&A Section
         </h3>
-        <button onClick={btnHandler1} className="btn btn-primary" style={{"float":"right", "marginRight":"2rem", "marginTop":"-1.2rem", "borderRadius":"2rem"}}>Ask a Question</button>
+        <button
+          onClick={btnHandler1}
+          className="btn btn-primary fontlink"
+          style={{
+            float: "right",
+            marginRight: "2rem",
+            marginTop: "-1.2rem",
+            borderRadius: "2rem",
+          }}
+        >
+          Ask a Question
+        </button>
       </div>
 
       <div className="accordion fontlink2" id="accordionExample">
         <div
           className="accordion-item mb-4"
-          style={{ backgroundColor: "#e3e3e3" }}
+          style={{ backgroundColor: "#bfbfbf" }}
         >
           <h2 className="accordion-header" id="headingOne">
             <button
@@ -63,15 +73,18 @@ export default function Qna() {
             aria-labelledby="headingOne"
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+            <div className="accordion-body font-weight-bold">
+              <strong>
+                This is the first item's accordion body. It is shown by default,
+                until the collapse plugin adds the appropriate classNamees that
+                we use to style each element. These classNamees control the
+                overall appearance, as well as the showing and hiding via CSS
+                transitions. You can modify any of this with custom CSS or
+                overriding our default variables. It's also worth noting that
+                just about any HTML can go within the{" "}
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </strong>
               <br />
               <br />
               <Link
@@ -126,14 +139,17 @@ export default function Qna() {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
-              control the overall appearance, as well as the showing and hiding
-              via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <strong>
+                This is the first item's accordion body. It is shown by default,
+                until the collapse plugin adds the appropriate classNamees that
+                we use to style each element. These classNamees control the
+                overall appearance, as well as the showing and hiding via CSS
+                transitions. You can modify any of this with custom CSS or
+                overriding our default variables. It's also worth noting that
+                just about any HTML can go within the{" "}
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </strong>
               <br />
               <br />
               <Link
