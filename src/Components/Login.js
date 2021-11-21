@@ -50,9 +50,17 @@ const Login = () => {
     })
   };
   return (
-    <div pt-5>
-      <div className="form-full border border-white container shadow p-3 mb-5 bg-white rounded">
-        <form method="POST">
+    <div className="p-2 container" >
+      <div className="form-full border border-white  shadow-lg p-3 mb-5 bg-white rounded">
+        <form method="POST" className="rounded">
+          <img
+            src="https://pbs.twimg.com/media/FEsUcgBVgAQAv77?format=jpg&name=small"
+            alt="ASK_IIITM"
+            className="rounded mb-2 img-fluid "
+            // style={{height:"20%"}}
+           
+          />
+          
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
