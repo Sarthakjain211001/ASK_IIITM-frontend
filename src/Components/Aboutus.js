@@ -24,7 +24,7 @@ export default function AboutUs() {
             college social media.
           </p>
           <p className="lead">
-            <a href="#" className="btn btn-lg btn-secondary mb-5 ">
+            <a href="https://github.com/Sarthakjain211001/ASK_IIITM-frontend" className="btn btn-lg btn-secondary mb-5 ">
               Learn more
             </a>
           </p>
