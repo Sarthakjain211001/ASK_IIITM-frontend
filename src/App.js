@@ -53,10 +53,10 @@ const Routing = ()=>{
         <Route exact path="/viewblog/:blogid" element={<Viewblog />} />
         <Route exact path="/logout" element={<Logout />} />
         <Route exact path="/writeanewblog" element={<Newblog />} />
-        <Route exact path="/question" element={<Question_page />} />
+        <Route path="/question/:quesid" element={<Question_page />} />
         <Route exact path="/opportunities" element={<Opportunities />} />
         <Route exact path="/myprofile" element={<Profile />} />
-        <Route exact path="/giveanswer" element={<GiveAnswer />} />
+        <Route  path="/giveanswer/:quesid" element={<GiveAnswer />} />
         <Route exact path="/askQuestion" element={<AskAQues />} />
 
         <Route
