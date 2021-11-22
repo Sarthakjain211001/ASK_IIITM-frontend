@@ -1,7 +1,9 @@
 import logo from "./logo.svg";
 import "./index.css";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React,{createContext,useReducer,useEffect,useContext} from 'react'
+import {reducer,initialState} from './reducers/userReducer'; 
+import { BrowserRouter as Router, Routes, Route,useNavigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Aboutus from "./Components/Aboutus";
 import Opportunities from "./Components/Opportunities";
@@ -24,10 +26,25 @@ import Logout from "./Components/Logout";
 import Error_page from "./Components/Error_page";
 import AskAQues from "./Components/AskAQues";
 
-function App() {
+export const UserContext = createContext()
+
+const Routing = ()=>{
+  const navigate = useNavigate();
+  const {state,dispatch} = useContext(UserContext)
+  
+  const user = state;
+  useEffect(() => {
+    console.log(typeof(user))
+    if(user){
+      
+       dispatch({type:"USER",payload:user})
+       navigate('/')
+    }else{
+       navigate('/login')
+    }
+ },[])
   return (
-    <Router>
-      <Navbar />
+      
       <Routes>
         <Route exact path="/" element={<Qna />} />
         <Route exact path="/about" element={<Aboutus />} />
@@ -37,10 +54,10 @@ function App() {
         <Route exact path="/viewblog/:blogid" element={<Viewblog />} />
         <Route exact path="/logout" element={<Logout />} />
         <Route exact path="/writeanewblog" element={<Newblog />} />
-        <Route exact path="/question" element={<Question_page />} />
+        <Route exact path="/question/:quesid" element={<Question_page />} />
         <Route exact path="/opportunities" element={<Opportunities />} />
         <Route exact path="/myprofile" element={<Profile />} />
-        <Route exact path="/giveanswer" element={<GiveAnswer />} />
+        <Route exact path="/giveanswer/:quesid" element={<GiveAnswer />} />
         <Route exact path="/askQuestion" element={<AskAQues />} />
 
         <Route
@@ -65,9 +82,19 @@ function App() {
         />
         <Route path="*" element={<Error_page />} />
       </Routes>
+  );
+}
 
+function App() {
+  const [state,dispatch] = useReducer(reducer,initialState)
+  return (
+    <UserContext.Provider value={{state,dispatch}}>
+    <Router>
+      <Navbar />
+      <Routing/>
       <Footer />
     </Router>
+    </UserContext.Provider>
   );
 }
 
