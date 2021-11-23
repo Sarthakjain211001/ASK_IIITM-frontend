@@ -43,8 +43,9 @@ const Routing = ()=>{
        navigate('/login')
     }
  },[])
-  return(
-    <Routes>
+  return (
+      
+      <Routes>
         <Route exact path="/" element={<Qna />} />
         <Route exact path="/about" element={<Aboutus />} />
         <Route exact path="/signup" element={<Signup />} />
@@ -52,7 +53,8 @@ const Routing = ()=>{
         <Route exact path="/blogs" element={<Blogs />} />
         <Route exact path="/viewblog/:blogid" element={<Viewblog />} />
         <Route exact path="/logout" element={<Logout />} />
-        <Route exact path="/writeanewblog" element={<Newblog />} />
+        <Route exact path="/writeanewblog" element={<Newblog />} 
+
         <Route path="/question/:quesid" element={<Question_page />} />
         <Route exact path="/opportunities" element={<Opportunities />} />
         <Route exact path="/myprofile" element={<Profile />} />
@@ -81,7 +83,7 @@ const Routing = ()=>{
         />
         <Route path="*" element={<Error_page />} />
       </Routes>
-  )
+  );
 }
 
 function App() {
