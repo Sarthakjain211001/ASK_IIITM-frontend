@@ -6,7 +6,7 @@ import { useCookies } from 'react-cookie';
 const Login = () => {
   const {state,dispatch} = useContext(UserContext)
   const navigate = useNavigate();
-  const [cookies, setCookie] = useCookies(['jwtoken']);
+  const [cookies, setCookie,removeCookie] = useCookies(['jwtoken']);
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -38,7 +38,9 @@ const Login = () => {
           console.log("error");
        }
        else{
+         
           setCookie('jwtoken', data.token,{ path: '/' });
+          localStorage.setItem('user',JSON.stringify(data.user))
           console.log(data.user)
           dispatch({type:"USER",payload:data.user})
           console.log(state)

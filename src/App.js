@@ -32,15 +32,14 @@ const Routing = ()=>{
   const navigate = useNavigate();
   const {state,dispatch} = useContext(UserContext)
   
-  const user = state;
   useEffect(() => {
-    console.log(typeof(user))
+    const user = JSON.parse(localStorage.getItem("user"))
     if(user){
       
        dispatch({type:"USER",payload:user})
        navigate('/')
     }else{
-       navigate('/login')
+       navigate('/signup')
     }
  },[])
   return (
@@ -54,10 +53,11 @@ const Routing = ()=>{
         <Route exact path="/viewblog/:blogid" element={<Viewblog />} />
         <Route exact path="/logout" element={<Logout />} />
         <Route exact path="/writeanewblog" element={<Newblog />} />
-        <Route exact path="/question/:quesid" element={<Question_page />} />
+
+        <Route path="/question/:quesid" element={<Question_page />} />
         <Route exact path="/opportunities" element={<Opportunities />} />
         <Route exact path="/myprofile" element={<Profile />} />
-        <Route exact path="/giveanswer/:quesid" element={<GiveAnswer />} />
+        <Route  path="/giveanswer/:quesid" element={<GiveAnswer />} />
         <Route exact path="/askQuestion" element={<AskAQues />} />
 
         <Route
