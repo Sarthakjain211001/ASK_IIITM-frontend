@@ -35,94 +35,94 @@ export default function Question_page(props) {
         call();
     }, []);
 
-    // let LikeToggle = true;
-    // let DislikeToggle = true;
+    let LikeToggle = true;
+    let DislikeToggle = true;
 
-    // let LiketoggleFun=()=>{
-    //    LikeToggle ? LikeHandler() : ClearLikeHandler()
-    //    LikeToggle = !LikeToggle;
-    //    DislikeToggle = true;
-    // }    
-    // let DisliketoggleFun=()=>{
-    //    DislikeToggle ? DislikeHandler() : ClearDislikeHandler()
-    //    DislikeToggle = !DislikeToggle;
-    //    LikeToggle = true;
-    // }
-    // let btnHandler=()=>{
-    //     window.open("/giveAnswer", '_blank')
-    //    }
-    //    let LikeHandler=()=>{
-    //     document.getElementById("LikeID") .className="bi bi-hand-thumbs-up-fill";
-    //     document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
-    //    }
-    //    let ClearLikeHandler=()=>{
-    //     document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
-    //     document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
-    //    }
-    //    let DislikeHandler=()=>{
-    //     document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
-    //     document.getElementById("DislikeID").className="bi bi-hand-thumbs-down-fill";
-    //    }
-    //    let ClearDislikeHandler=()=>{
-    //     document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
-    //     document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
-    //    }
-    //  const likePost = (id)=>{
-    //   fetch('/answer/like',{
-    //       method:"put",
-    //       headers:{
-    //       Accept:"application/json",
-    //       "Content-Type":"application/json",
-    //   },
-    //       body:JSON.stringify({
-    //         quesId:ques._id,
-    //           ansId:id
-    //       })
-    //   }).then(res=>res.json())
-    //   .then(result=>{
-    //     console.log(result)
-    //       // const newData = ques.map(Q=>{
-    //       //     if(Q.answers._id===result._id){
-    //       //         return result
-    //       //     }else{
-    //       //         return ques
-    //       //     }
-    //       // })
-    //        //setQues(newData)
-    //   }).catch(err=>{
-    //       console.log(err)
-    //   })
-    // }
+    let LiketoggleFun=()=>{
+       LikeToggle ? LikeHandler() : ClearLikeHandler()
+       LikeToggle = !LikeToggle;
+       DislikeToggle = true;
+    }    
+    let DisliketoggleFun=()=>{
+       DislikeToggle ? DislikeHandler() : ClearDislikeHandler()
+       DislikeToggle = !DislikeToggle;
+       LikeToggle = true;
+    }
+    let btnHandler=()=>{
+        window.open("/giveAnswer", '_blank')
+       }
+       let LikeHandler=()=>{
+        document.getElementById("LikeID") .className="bi bi-hand-thumbs-up-fill";
+        document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
+       }
+       let ClearLikeHandler=()=>{
+        document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
+        document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
+       }
+       let DislikeHandler=()=>{
+        document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
+        document.getElementById("DislikeID").className="bi bi-hand-thumbs-down-fill";
+       }
+       let ClearDislikeHandler=()=>{
+        document.getElementById("LikeID").className="bi bi-hand-thumbs-up";
+        document.getElementById("DislikeID").className="bi bi-hand-thumbs-down";
+       }
+     const likePost = (id)=>{
+      fetch('/answer/like',{
+          method:"put",
+          headers:{
+          Accept:"application/json",
+          "Content-Type":"application/json",
+      },
+          body:JSON.stringify({
+            quesId:ques._id,
+              ansId:id
+          })
+      }).then(res=>res.json())
+      .then(result=>{
+        console.log(result)
+          // const newData = ques.map(Q=>{
+          //     if(Q.answers._id===result._id){
+          //         return result
+          //     }else{
+          //         return ques
+          //     }
+          // })
+           //setQues(newData)
+      }).catch(err=>{
+          console.log(err)
+      })
+    }
 
-    // const unlikePost = (id)=>{
-    //   fetch('/answer/unlike',{
-    //       method:"put",
-    //       headers:{
-    //       Accept:"application/json",
-    //       "Content-Type":"application/json",
-    //   },
-    //       body:JSON.stringify({
-    //         quesId:ques._id,
-    //           ansId:id
-    //       })
+    const unlikePost = (id)=>{
+      fetch('/answer/unlike',{
+          method:"put",
+          headers:{
+          Accept:"application/json",
+          "Content-Type":"application/json",
+      },
+          body:JSON.stringify({
+            quesId:ques._id,
+              ansId:id
+          })
 
-    //   }).then(res=>res.json())
-    //   .then(result=>{
-    //     console.log(id)
-    //     console.log(ques)
-    //      console.log(result)
-    //     //  const newData = ques.map(Q=>{
-    //     //      if(Q.answers._id===result._id){
-    //     //          return result
-    //     //      }else{
-    //     //          return ques
-    //     //      }
-    //     //  })
-    //       setQues(result)
-    //   }).catch(err=>{
-    //       console.log(err)
-    //   })
-    // }
+      }).then(res=>res.json())
+      .then(result=>{
+        console.log(id)
+        console.log(ques)
+         console.log(result)
+        //  const newData = ques.map(Q=>{
+        //      if(Q.answers._id===result._id){
+        //          return result
+        //      }else{
+        //          return ques
+        //      }
+        //  })
+          setQues(result)
+      }).catch(err=>{
+          console.log(err)
+      })
+    }
 
     return (
         <div className="container mx-8 my-3">
