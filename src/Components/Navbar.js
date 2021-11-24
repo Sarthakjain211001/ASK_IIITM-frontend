@@ -1,8 +1,19 @@
-import React from "react";
+import React,{useContext} from "react";
 import { Link } from "react-router-dom";
 import Logout from "./Logout";
+import {UserContext} from '../App'
+import { useCookies } from 'react-cookie';
 
 export default function Navbar(props) {
+  const {state,dispatch} = useContext(UserContext)
+  const [cookies, setCookie,removeCookie] = useCookies(['jwtoken']);
+  const logout =()=>{
+    console.log("logout")
+    dispatch({type:"CLEAR"})
+    localStorage.clear()
+    //removeCookie('jwtoken');
+    window.location.reload();
+  }
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fontlink">
@@ -100,7 +111,7 @@ export default function Navbar(props) {
                         >
                           Cancel
                         </button>
-                        <button type="button" className="btn btn-primary">
+                        <button type="button" className="btn btn-primary" onClick={logout}> 
                           Yes, LogOut
                         </button>
                       </div>
